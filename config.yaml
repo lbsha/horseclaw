@@ -1,0 +1,54 @@
+# AI 开发流水线配置
+# 复制此文件为 config.yaml 并填写实际值
+
+pipeline:
+  # 循环控制
+  max_iterations: 1000           # 最多循环次数
+  iteration_timeout: 120         # 每次循环超时(秒)
+  
+  # 提交控制
+  auto_commit: true               # 自动提交
+  commit_threshold: 3            # 连续通过3次才提交
+  max_commits_per_hour: 50       # 每小时最多提交次数
+  
+  # 失败处理
+  max_retries: 5                # 失败最大重试次数
+  rollback_on_failure: true     # 失败是否回滚
+  failure_alert: true           # 失败告警
+
+# MiniMax API 配置
+minimax:
+  enabled: true
+  model: MiniMax-M2.1           # 模型选择: MiniMax-M2.1 / MiniMax-M2.5
+  temperature: 0.7             # 创意程度: 0-1
+  
+# 问题发现配置
+scanning:
+  enabled: true
+  targets:
+    - type: lint                # 代码风格检查
+    - type: test                # 单元测试
+    - type: type-check          # 类型检查
+    - type: security            # 安全扫描
+
+# 质量门槛
+quality_gates:
+  - name: lint_pass            # Lint通过
+  - name: test_pass            # 测试通过
+  - name: type_check           # 类型检查通过
+  - name: no_security          # 无安全问题
+
+# 告警配置
+alerts:
+  telegram:
+    enabled: true
+    chat_id: "6072206856"       # 替换为你的 Chat ID
+    
+  slack:
+    enabled: false
+    webhook_url: ""             # 替换为你的 Webhook URL
+
+# Git 配置
+git:
+  branch: main                  # 主分支名
+  auto_push: true              # 自动推送到远程
