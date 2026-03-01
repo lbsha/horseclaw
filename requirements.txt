@@ -1,2 +1,0 @@
-# Python 依赖
-urllib3>=1.26
