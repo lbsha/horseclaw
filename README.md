@@ -2,18 +2,25 @@
 
 马力全开，爪到成功
 
-2026 马年限定版自主 coding agent —— 像 Peter Steinberger 一样，一人顶团队，疯狂迭代你的代码。
+2026 马年限定版 Java 自主 coding agent —— 像 Peter Steinberger 一样，一人顶团队，疯狂迭代你的代码。
 
 ---
 
-HorseClaw 是为大型 Java/Spring Boot 项目（尤其是金融/证券行业）量身打造的 AI 驱动开发引擎。
+HorseClaw 是为大型 **Java/Spring Boot 项目**（尤其是金融/证券行业）量身打造的 AI 驱动开发引擎。
 
 它以 **极端原子 commit**、**无人值守 loop**、**多 agent 协作**（Coder → Committer → Reviewer）为核心，追求 **信**（准确无 bug、合规审计）、**达**（马力全开、速达迭代）、**雅**（代码优雅、可维护）三合一境界。
 
 - **一天几百 commit**？它能。
-- **本地 mvn verify 100% 通过才 push**？强制。
+- **本地 `mvn verify` / `gradle build` 100% 通过才 push**？强制。
 - **证券风控/审计日志永不遗漏**？内置边界。
 - **马年加持**：马上修复 bug，马上加测试，马上优雅重构。
+
+### 适用项目
+
+- Java 8 ~ Java 21
+- Spring Boot 1.x ~ 3.x
+- Maven / Gradle
+- 金融、证券、风控系统
 
 ---
 
